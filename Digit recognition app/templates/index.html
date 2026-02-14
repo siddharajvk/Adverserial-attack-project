@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digit Recognition Website</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid black;
+            margin-top: 10px;
+            cursor: crosshair;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧠 Handwritten Digit Recognition</h1>
+
+    <!-- Upload Section -->
+    <h2>Upload Digit Image</h2>
+    <input type="file" id="uploadInput">
+    <button onclick="uploadPredict()">Predict Upload</button>
+
+    <hr>
+
+    <!-- Draw Section -->
+    <h2>Draw Digit Below</h2>
+    <canvas id="canvas" width="280" height="280"></canvas><br>
+
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="drawPredict()">Predict Drawing</button>
+
+    <h2 id="result"></h2>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
